@@ -6,5 +6,5 @@ CREATE TABLE animals (
     date_of_brith date NOT NULL,
     escape_attempts int,
     neutered boolean,
-    weight_kg int NOT NULL
+    weight_kg decimal NOT NULL
 );
