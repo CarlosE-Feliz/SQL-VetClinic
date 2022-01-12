@@ -14,6 +14,7 @@ CREATE TABLE animals (
 )
 
 ALTER TABLE animals ADD species VARCHAR(30)
+ALTER TABLE animals DROP  species
 
 CREATE TABLE owners (
     id_owners int NOT NULL,
