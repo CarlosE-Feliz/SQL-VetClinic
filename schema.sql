@@ -47,3 +47,5 @@ CREATE TABLE specializations (
     id_species int,
 	id_vet int
 )
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
