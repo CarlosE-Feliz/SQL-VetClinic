@@ -183,10 +183,6 @@ LEFT JOIN vets ON vets.id_vets = visits.id_vet
 WHERE vets.name_vets = 'Maisy Smith'
 GROUP BY species.name;
 
-CREATE INDEX idx_visits_vet_id ON visits(id_vet);
-CREATE INDEX ON visits (id_animal);
-CREATE INDEX ON owners ((lower(email)));
-
 EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where id_animal = 4;
 EXPLAIN ANALYZE SELECT * FROM visits where id_vet = 2;
 EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
