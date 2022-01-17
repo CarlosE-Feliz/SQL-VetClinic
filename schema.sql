@@ -47,3 +47,10 @@ CREATE TABLE specializations (
     id_species int,
 	id_vet int
 )
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+CREATE INDEX idx_visits_vet_id ON visits(id_vet);
+CREATE INDEX ON visits (id_animal);
+CREATE INDEX ON owners ((lower(email)));
+

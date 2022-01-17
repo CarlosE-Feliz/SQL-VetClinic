@@ -228,3 +228,8 @@ VALUES ((SELECT id_animals FROM animals WHERE name = 'Blossom'),
 INSERT INTO visits (id_animal, id_vet, date_visit) 
 VALUES ((SELECT id_animals FROM animals WHERE name = 'Blossom'), 
 (SELECT id_vets FROM vets WHERE name_vets = 'William Tatcher'), '2021-01-11')
+
+INSERT INTO visits (id_animal, id-vet, date_visit) 
+SELECT * FROM (SELECT id FROM animals) id_animals, (SELECT id_vets FROM vets) vets_ids, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;
+
+INSERT INTO owners (full_name, email) SELECT 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
